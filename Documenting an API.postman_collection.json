@@ -7,6 +7,21 @@
 	"item": [
 		{
 			"name": "Postman Echo GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5adb6215-a041-4cde-a2de-b1a7e0cf94d2",
+						"exec": [
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.headers.host).to.eql(\"postman-echo.com1\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
